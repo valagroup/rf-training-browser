@@ -9,7 +9,9 @@ Suite Teardown   Close Browser
 *** Test Cases ***
 Ilmoittautumislomake
     Hae etusivulta    Testaus
+    #Hyväksy evästeet
     Click    //*[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper"]/a[1]
+    #Navigoi lomakkeelle
     Click    //span[contains(text(),"Tietojenkäsittely, avoin amk")]   force=True
     Click    //a[contains(text(),"Ilmoittautuminen")]
     Click    //button//div[contains(text(),"Uusien opiskelijoiden ilmoittautumislomakkeet")]
