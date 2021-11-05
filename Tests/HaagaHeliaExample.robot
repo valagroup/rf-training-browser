@@ -16,5 +16,6 @@ Ilmoittautumislomake
     Click    //a[contains(text(),"Ilmoittautuminen")]
     Click    //button//div[contains(text(),"Uusien opiskelijoiden ilmoittautumislomakkeet")]
     Click    //a[contains(text(),"479")]
+    #Tarkisteaan, että ollaan kirjautumassa Haaga-Helia E-lomakkeelle
     ${Text}=    get text    id=displayName
     Should Be Equal    ${Text}    Haaga-Helia E-lomake
