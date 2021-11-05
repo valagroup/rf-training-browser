@@ -1,5 +1,6 @@
 *** Variables ***
-${browser}   chromium
-${headlessValue}    false
-${viewport}   {'width': 1920, 'height': 1080}
-${url}       https://robotframework.org/
+${URL}       https://robotframework.org/
+${BROWSER}   chromium
+${HEADLESS_VALUE}    false
+${VIEWPORT}   {'width': 1920, 'height': 1080}
+
