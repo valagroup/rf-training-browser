@@ -45,3 +45,16 @@ Ohjeet windowsille ja macille löytyy https://git-scm.com/book/en/v2/Getting-Sta
 ### Vs Code (ei pakollinen, kunhan on joku editori):
 
 Installerit löytyvät https://code.visualstudio.com/download
+
+### Lähteitä
+
+Jos haluaa etsiä lisätietoa ennen seuraavaa kertaa, niin sitä voi etsiä näistä paikoista:
+
+1. https://robotframework-browser.org/
+1. https://robotframework.org/
+1. Robot Framework Slack-kanava
+1. https://groups.google.com/g/robotframework-users
+   Keskustelu foorumi
+1. Sähköpostia meille:
+   joonas.peuralinna@valagroup.com
+   lauri.peltola@valagroup.com
