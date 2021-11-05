@@ -1,5 +1,5 @@
 *** Keywords ***
-Open page to url
+open page to url
     [arguments]   ${url}
     New Browser    ${browser}    ${headlessValue}
     New Context   viewport=${viewport}
