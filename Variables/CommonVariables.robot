@@ -1,5 +1,5 @@
 *** Variables ***
-${url}              #TODO
-${browser}          #TODO
-${headlessValue}    false
-${viewport}         {'width': 1920, 'height': 1080}
+${URL}              #TODO
+${BROWSER}          #TODO
+${HEADLESS_VALUE}    false
+${VIEWPORT}         {'width': 1920, 'height': 1080}
