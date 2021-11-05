@@ -1,6 +1,7 @@
 *** Keywords ***
 Open page to url
     [arguments]   ${URL}
+    Set Browser Timeout    20s
     New Browser    ${browser}    ${HEADLESS_VALUE}
     New Context   viewport=${VIEWPORT}
     New page   ${URL}
@@ -8,5 +9,5 @@ Open page to url
 Hae etusivulta
     [Arguments]    ${Teksti}
     Click    ${HakuValikko}
-    type text    ${HakuKentta}    ${Teksti}
+    Fill Text    ${HakuKentta}    ${Teksti}
     Click    ${EtsiNappula}
