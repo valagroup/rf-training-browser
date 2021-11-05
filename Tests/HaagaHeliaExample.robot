@@ -8,7 +8,7 @@ Suite Teardown   Close Browser
 
 *** Test Cases ***
 Ilmoittautumislomake
-    Hae etusivulta    Testaus
+    Hae etusivulta    tietojenkäsittely avoin amk
     #Hyväksy evästeet
     Click    //*[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper"]/a[1]
     #Navigoi lomakkeelle
@@ -17,4 +17,4 @@ Ilmoittautumislomake
     Click    //button//div[contains(text(),"Uusien opiskelijoiden ilmoittautumislomakkeet")]
     Click    //a[contains(text(),"479")]
     ${Text}=    get text    id=displayName
-    should be equal    ${Text}    Haaga-Helia E-lomake
+    Should Be Equal    ${Text}    Haaga-Helia E-lomake

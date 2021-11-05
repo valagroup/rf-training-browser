@@ -9,8 +9,8 @@ Suite Teardown   Close Browser
 Verify title
    [Documentation]    We will verify that the web page has correct title.
    ${title}=    Get title
-   Should be equal as strings   ${title}   Robot Framework
+   Should Be Equal As Strings   ${title}   Robot Framework
 
 This test will fail
    ${title}=    Get title
-   Should be equal as strings   ${title}   Robot Frame
+   Should Be Equal As Strings   ${title}   Robot Frame
