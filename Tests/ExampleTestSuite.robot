@@ -7,10 +7,10 @@ Suite Teardown   Close Browser
 
 *** Test Cases ***
 Verify title
+   [Tags]     demo
    [Documentation]    We will verify that the web page has correct title.
-   ${title}=    Get title
-   Should Be Equal As Strings   ${title}   Robot Framework
+   ${title}=    Get title   *=    Haaga-Helia
 
 This test will fail
-   ${title}=    Get title
-   Should Be Equal As Strings   ${title}   Robot Frame
+   [Tags]     demo
+   ${title}=    Get title    ==    Haaga-Helia

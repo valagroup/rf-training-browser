@@ -2,20 +2,15 @@
 Library         Browser
 Resource        ../Variables/CommonVariables.robot
 Resource        ../Keywords/CommonKeywords.robot
+Resource        ../Keywords/SearchKeywords.robot
 Resource        ../Variables/Locators.robot
-Suite Setup      Open page to url    ${URL}
 Suite Teardown   Close Browser
 
 *** Test Cases ***
-Ilmoittautumislomake
-    Hae etusivulta    tietojenkäsittely avoin amk
-    #Hyväksy evästeet
-    Click    //*[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper"]/a[1]
-    #Navigoi lomakkeelle
-    Click    //span[contains(text(),"Tietojenkäsittely, avoin amk")]   force=True
-    Click    //a[contains(text(),"Ilmoittautuminen")]
-    Click    //button//div[contains(text(),"Uusien opiskelijoiden ilmoittautumislomakkeet")]
-    Click    //a[contains(text(),"479")]
-    #Tarkisteaan, että ollaan kirjautumassa Haaga-Helia E-lomakkeelle
-    ${Text}=    get text    id=displayName
-    Should Be Equal    ${Text}    Haaga-Helia E-lomake
+sign up for course
+    [Tags]    search
+    [Setup]   open homepage and accept cookies
+    Given user searches for a course
+    When user selects correct search result
+         user opens registration form for new students with tuition
+    Then user should be on identify page
