@@ -1,2 +1,2 @@
 #!/bin/sh
-robot --outputdir ./Results ./Tests
+robot -i $1 --outputdir ./Results ./Tests

@@ -7,7 +7,8 @@ Suite Teardown   Close Browser
 
 *** Test Cases ***
 verify title
-   [Documentation]    We will verify that the web page has correct title.
+    [Tags]    smoke
+    [Documentation]    We will verify that the web page has correct title.
    ${title}=    Get title
    Should Be Equal As Strings   ${title}   Robot Framework
 
