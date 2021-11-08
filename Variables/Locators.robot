@@ -8,5 +8,5 @@ ${ResultsField}          //*[contains(@class, 'view-display-id-search')]
 ${SearchResultLink}      //*[contains(text(),"Tietojenkäsittely, avoin amk")]
 
 ${RegisterButton}        //a[contains(text(),"Ilmoittautuminen")]
-${NewStudentFormsDropdown}    //*[contains(text(),"Uusien opiskelijoiden ilmoittautumislomakkeet")]
+${NewStudentFormsDropdown}    id=accordion-control-2948
 ${NewStudentTuitionFormLink}    //a[contains(text(),"479")]

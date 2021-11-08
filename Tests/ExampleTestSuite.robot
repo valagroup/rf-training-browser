@@ -9,8 +9,8 @@ Suite Teardown   Close Browser
 Verify title
    [Tags]     demo
    [Documentation]    We will verify that the web page has correct title.
-   ${title}=    Get title   *=    Haaga-Helia
+   Get title   *=    Haaga-Helia
 
 This test will fail
    [Tags]     demo
-   ${title}=    Get title    ==    Haaga-Helia
+   Get title    ==    Haaga-Helia
