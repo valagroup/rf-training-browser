@@ -18,7 +18,7 @@ jobs:
 
       - name: Run robot tests
         run: |
-          docker run --rm robot-browser bash -c "robot --outputdir ./Tests/Results ./Tests"
+          docker run --rm robot-browser bash -c "robot --outputdir /Tests/Results /Tests"
 
       - name: Retrieve test results from docker container
         if: always()
