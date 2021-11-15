@@ -20,9 +20,12 @@ jobs:
         run: |
           docker run --rm robot-browser bash -c "robot --outputdir ./Tests/Results ./Tests"
 
+      - name: Retrieve test results from docker container
+        run: docker cp robot-tests:/Tests/Results/. ${{ github.workspace }}/reports/
+
       - name: upload tests results as artifacts
         if: always()
         uses: actions/upload-artifact@v1
         with:
           name: reports
-          path: ${{ github.workspace }}/Tests/Results
+          path: ${{ github.workspace }}/reports
