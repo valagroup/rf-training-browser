@@ -1,0 +1,27 @@
+name: Run robot tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  install-rf:
+    name: Build docker image and start tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: Build docker image for distribution
+        run: docker build -t robot-browser ./robot/
+
+      - name: Run robot tests
+        run: |
+          docker run --rm robot-browser bash -c "robot -v BROWSER:$1 --outputdir /tests/results /tests"
+
+      - name: upload tests results as artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: reports
+          path: ${{ github.workspace }}//tests/results
