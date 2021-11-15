@@ -16,9 +16,12 @@ jobs:
       - name: Build docker image
         run: docker build -t robot-browser .
 
+      - name: Create folder for reports
+        run: mkdir -p ${{ github.workspace }}/reports
+
       - name: Run robot tests
         run: |
-          docker run robot-browser bash -c "robot --outputdir /robot/output /robot"
+          docker run --name "robot-tests" robot-browser bash -c "robot -i demo --outputdir /robot/output /robot"
 
       - name: list containers
         if: always()
@@ -26,7 +29,7 @@ jobs:
 
       - name: Retrieve test results from docker container
         if: always()
-        run: docker cp robot-browser:/robot/output/. ${{ github.workspace }}/reports/
+        run: docker cp robot-tests:/robot/output/. ${{ github.workspace }}/reports/
 
       - name: upload tests results as artifacts
         if: always()
