@@ -18,11 +18,11 @@ jobs:
 
       - name: Run robot tests
         run: |
-          docker run --rm robot-browser bash -c "robot --outputdir ./Tests/results ./Tests"
+          docker run --rm robot-browser bash -c "robot --outputdir ./Tests/Results ./Tests"
 
       - name: upload tests results as artifacts
         if: always()
         uses: actions/upload-artifact@v1
         with:
           name: reports
-          path: ${{ github.workspace }}/tests/results
+          path: ${{ github.workspace }}/Tests/Results
