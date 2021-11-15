@@ -18,7 +18,7 @@ jobs:
 
       - name: Run robot tests
         run: |
-          docker run --rm robot-browser bash -c "robot -v BROWSER:$1 --outputdir /tests/results /tests"
+          docker run --rm robot-browser bash -c "robot --outputdir /Tests/results /Tests"
 
       - name: upload tests results as artifacts
         uses: actions/upload-artifact@v1
