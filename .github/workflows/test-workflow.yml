@@ -13,7 +13,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v2
 
-      - name: Build docker image for distribution
+      - name: Build docker image
         run: docker build -t robot-browser .
 
       - name: Run robot tests
@@ -21,6 +21,7 @@ jobs:
           docker run --rm robot-browser bash -c "robot --outputdir ./Tests/Results ./Tests"
 
       - name: Retrieve test results from docker container
+        if: always()
         run: docker cp robot-tests:/Tests/Results/. ${{ github.workspace }}/reports/
 
       - name: upload tests results as artifacts
