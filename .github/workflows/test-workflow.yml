@@ -21,11 +21,9 @@ jobs:
 
       - name: Run robot tests
         run: |
-          docker run --name "robot-tests" robot-browser bash -c "robot -i demo --outputdir /robot/output /robot"
-
-      - name: list containers
-        if: always()
-        run: docker ps
+          docker run --name "robot-tests" \
+            robot-browser \
+              bash -c "robot -i demo --outputdir /robot/output /robot"
 
       - name: Retrieve test results from docker container
         if: always()
