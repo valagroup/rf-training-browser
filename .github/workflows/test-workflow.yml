@@ -21,6 +21,7 @@ jobs:
           docker run --rm robot-browser bash -c "robot --outputdir ./Tests/results ./Tests"
 
       - name: upload tests results as artifacts
+        if: always()
         uses: actions/upload-artifact@v1
         with:
           name: reports
