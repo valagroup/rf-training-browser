@@ -5,6 +5,6 @@ RUN pip3 install --upgrade pip
 RUN pip3 install -r /tmp/requirements.txt
 
 USER root
-COPY tests /Tests
-RUN chown -R pwuser:pwuser /tests
+COPY robot /robot
+RUN chown -R pwuser:pwuser /robot
 USER pwuser
