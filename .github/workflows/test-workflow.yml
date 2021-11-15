@@ -22,7 +22,7 @@ jobs:
 
       - name: Retrieve test results from docker container
         if: always()
-        run: docker cp robot-tests:/Tests/Results/. ${{ github.workspace }}/reports/
+        run: docker cp robot-browser:/Tests/Results/. ${{ github.workspace }}/reports/
 
       - name: upload tests results as artifacts
         if: always()
