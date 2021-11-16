@@ -2,8 +2,5 @@ log.html
 output.xml
 report.html
 playwright-log.txt
-<<<<<<< HEAD
 Results/
-=======
 *.pyc
->>>>>>> 4cf2f9e (python library)
