@@ -4,3 +4,4 @@ report.html
 playwright-log.txt
 Results/
 *.pyc
+__pycache__/

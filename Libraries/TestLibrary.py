@@ -2,22 +2,29 @@ import os
 
 class TestLibrary():
 
-  def __init__(self)
+  def __init__(self):
     numbersFile = open('numbers.txt', 'r')
     numbersFileContent = numbersFile.read()
-    numbersList = numbersFileContent.splitlines()
+    self.numbersList = numbersFileContent.splitlines()
     resultsFile = open('sums.txt', 'r')
     resultsFileContent = resultsFile.read()
-    resultsList = resultsFileContent.splitlines(
+    self.resultsList = resultsFileContent.splitlines()
 
-  def getFirstNummbers(self):
-    return numbersList[0]
+  def getFirstNumberPair(self):
+    firstPair = self.numbersList[0]
+    firstNumbers = firstPair.split(',')
+    return firstNumbers[0], firstNumbers[1]
 
-  def getListOfNumbers(self):
-    return  numbersList
+  def getListLength(self):
+      return len(self.numbersList)
 
   def getFirstResult(self):
-    return resultsList[0]
+    return self.resultsList[0]
 
-  def getListOfResults(self):
-    return resultsList
+  def getResultAtIndex(self, index):
+    return self.resultsList[index]
+
+  def getNumberPairAtIndex(self, index):
+    firstPair = self.numbersList[index]
+    firstNumbers = firstPair.split(',')
+    return firstNumbers[0], firstNumbers[1]

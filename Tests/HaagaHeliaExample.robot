@@ -3,7 +3,7 @@ Library         Browser
 Resource        ../Variables/CommonVariables.robot
 Resource        ../Keywords/CommonKeywords.robot
 Resource        ../Keywords/SearchKeywords.robot
-Resource        ../Variables/Locators.robot
+Resource        ../Variables/HaagaHeliaLocators.robot
 Suite Setup      open homepage and accept cookies
 Suite Teardown   Close Browser
 
