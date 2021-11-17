@@ -13,4 +13,4 @@ Verify title
 
 This test will fail
    [Tags]     demo
-   Get title    ==    Haaga-Helia
+   Get title    ==    Etusivu | Haaga-Helia

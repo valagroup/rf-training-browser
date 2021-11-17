@@ -13,4 +13,4 @@ sign up for course
     Given user searches for a course
     When user selects correct search result
          user opens registration form for new students with tuition
-    Then user should be on identify page
+    #Then user should be on identify page
