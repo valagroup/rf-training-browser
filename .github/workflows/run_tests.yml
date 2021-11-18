@@ -32,7 +32,7 @@ jobs:
 
       - name: upload results
         if: always()
-        uses: actions/upload-artifacts@v1
+        uses: actions/upload-artifact@v1
         with:
           name: reports
           path: ${{ github.workspace }}/reports/
